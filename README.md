@@ -1,7 +1,7 @@
 # Task Manager
 
-Steps to run the code:
+## Steps to run the code:
 
-```npm i
-
-```npm start
+```sh
+npm install
+npm start
