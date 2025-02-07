@@ -2,7 +2,6 @@
 
 Steps to run the code:
 
-````npm i
+```npm i
 
 ```npm start
-````
