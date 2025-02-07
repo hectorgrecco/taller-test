@@ -16,7 +16,7 @@ export class TaskController {
             res.status(201).json(createdTask);
         } catch (error) {
             const code = error?.code || 500;
-            res.status(code).json({ error: "Error creating task" });
+            res.status(code).json({ error: error?.message || "Error creating task" });
         }
     };
 
@@ -26,7 +26,7 @@ export class TaskController {
             res.status(200).json(tasks);
         } catch (error) {
             const code = error?.code || 500;
-            res.status(code).json({ error: "Error retrieving tasks" });
+            res.status(code).json({ error: error?.message || "Error retrieving tasks" });
         }
     };
 
@@ -41,7 +41,7 @@ export class TaskController {
             res.status(200).json(updatedTask);
         } catch (error) {
             const code = error?.code || 500;
-            res.status(code).json({ error: "Error updating task" });
+            res.status(code).json({ error: error?.message || "Error updating task" });
         }
     };
 
@@ -52,7 +52,7 @@ export class TaskController {
             res.status(204).send();
         } catch (error) {
             const code = error?.code || 500;
-            res.status(code).json({ error: "Error deleting task" });
+            res.status(code).json({ error: error?.message || "Error deleting task" });
         }
     };
 }
